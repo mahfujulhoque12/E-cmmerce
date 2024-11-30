@@ -101,7 +101,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
       {nestedMenu && (
         <div
           role="menu"
-          className={`dropdown lg:absolute lg:left-0 lg:top-[150px] lg:w-full lg:border-b lg:border-[#cacaca)] lg:rounded-b-[16px] lg:pt-8 lg:pb-8 lg:invisible lg:z-20 ${
+          className={`dropdown lg:absolute lg:left-0 lg:top-[75px] lg:w-full lg:border-b lg:border-[#cacaca)] lg:rounded-b-[16px] lg:pt-8 lg:pb-8 lg:invisible lg:z-20 ${
             active ? "h-auto" : "h-0 overflow-hidden lg:h-auto border-t"
           }`}
         >

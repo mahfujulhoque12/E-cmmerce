@@ -17,7 +17,7 @@ const Navigation = ({ mobileMenuPos = "left" }: MobileMenuOpeningPosition) => {
   const drawerButtonRef = useRef(null);
 
   return (
-    <header className="static h-[78px] bg-white border-b shadow-sm flex items-center ">
+    <header className="sticky top-0 right-0 z-40 h-[78px] bg-white border-b shadow-sm flex items-center ">
       <MaxWidthWrapper>
         <ContainerBox
           className="px-3

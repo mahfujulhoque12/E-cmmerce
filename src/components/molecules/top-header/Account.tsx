@@ -25,12 +25,7 @@ const Account = () => {
         </Paragraph>
         </Link>
 
-        <Link href="#">
         
-        <Paragraph className='text-white flex justify-center items-center gap-2'>Account <FaUserCheck size={20} className='text-white'/>
-        </Paragraph>
-        </Link>
-
         <Link href="#">
         <Paragraph  className='text-white flex justify-center relative items-center gap-2'>
             Cart <FaShoppingCart size={20} className='text-white'/>
@@ -38,6 +33,13 @@ const Account = () => {
             <Span className='absolute top-[-18px] right-[-12px]'>(0)</Span>
         </Paragraph>
         </Link>
+
+        <Link href="#">
+        
+        <Paragraph className='text-white flex justify-center items-center gap-2'>Account <FaUserCheck size={20} className='text-white'/>
+        </Paragraph>
+        </Link>
+
     </div>
   )
 }
