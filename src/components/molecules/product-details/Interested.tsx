@@ -1,3 +1,4 @@
+
 import React from "react";
 import image1 from "/public/new-arraival/cabinet1.png";
 import image2 from "/public/new-arraival/cabinet2.png";
@@ -148,9 +149,11 @@ const cardData: CardData[] = [
   },
 ]
 
-const NewArraivalProduct = () => {
+const Interested = () => {
   return (
-<div className="relative mt-8">
+    <div>
+        <CardTitle className='text-center font-semibold lg:text-xl'>You Might be Interested</CardTitle>
+        <div className="relative mt-4">
       <Carousel>
         <CarouselContent>
           {cardData.map((card) => (
@@ -196,7 +199,8 @@ const NewArraivalProduct = () => {
         <CarouselNext />
       </Carousel>
   </div>
+    </div>
   )
 }
 
-export default NewArraivalProduct
+export default Interested

@@ -9,7 +9,7 @@ const BestSaller = () => {
   return (
     <Section className='py-5 md:py-10'>
         <MaxWidthWrapper>
-        <Heading className='text-center'>Best Saller</Heading>
+        <Heading className='text-center'>Best Selling</Heading>
         <Paragraph className='text-center text-sm lg:text-base mt-1 capitalize'>Check Our best selling Product!</Paragraph>
         <BestSallerProduct/>
         </MaxWidthWrapper>

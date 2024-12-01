@@ -1,4 +1,5 @@
 import BestSaller from "@/components/organisms/best-saller/BestSaller";
+import Brand from "@/components/organisms/brand/Brand";
 import Delivary from "@/components/organisms/delivery/Delivary";
 import FeatureCategory from "@/components/organisms/feature-category/FeatureCategory";
 import FeatureProducts from "@/components/organisms/feature-products/FeatureProducts";
@@ -18,6 +19,7 @@ export default function Page() {
     <NewArraival/>
     <Delivary/>
     <BestSaller/>
+    <Brand/>
     </div>
   );
 }
