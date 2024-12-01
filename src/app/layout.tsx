@@ -5,6 +5,7 @@ import Navigation from "@/components/organisms/header/Navigation";
 import TopHeader from "@/components/organisms/top-header/TopHeader";
 import Footer from "@/components/organisms/footer/Footer";
 import NavSearchBar from "@/components/molecules/navbar/NavSearchBar";
+import DesktopFooter from "@/components/organisms/footer/DesktopFooter";
 
 const openSans = localFont({
   src: "./fonts/OpenSans-VariableFont_wdth,wght.ttf",
@@ -32,7 +33,7 @@ export default function RootLayout({
         <NavSearchBar/>
         {children}
         <Footer/>
-
+        <DesktopFooter/>
       </body>
     </html>
   );

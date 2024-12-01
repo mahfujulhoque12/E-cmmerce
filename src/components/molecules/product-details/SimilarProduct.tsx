@@ -1,8 +1,5 @@
+
 import React from "react";
-import image1 from "/public/new-arraival/cabinet1.png";
-import image2 from "/public/new-arraival/cabinet2.png";
-import image3 from "/public/new-arraival/cabinet3.png";
-import image4 from "/public/new-arraival/cabinet4.png";
 import image5 from "/public/new-arraival/cabinet5.png";
 import image6 from "/public/new-arraival/cabinet6.png";
 import image7 from "/public/new-arraival/cabinet7.png";
@@ -51,7 +48,7 @@ const cardData: CardData[] = [
     title: "Simpel bed for you and your family",
     slug: createSlug(title),
     category:"new arraival",
-    image: image1.src,
+    image: image10.src,
     price: 8500,
     oldPrice: 9650,
     discount: 650,
@@ -61,7 +58,7 @@ const cardData: CardData[] = [
     title: "Speacial bed for you",
     slug: createSlug(title),
      category:"new arraival",
-    image: image2.src,
+    image: image9.src,
     price: 8500,
     oldPrice: 9650,
     discount: 650,
@@ -71,7 +68,7 @@ const cardData: CardData[] = [
     title: "Normal bed for you",
     slug: createSlug(title),
      category:"new arraival",
-    image: image3.src,
+    image: image8.src,
     price: 8500,
     oldPrice: 9650,
     discount: 650,
@@ -81,7 +78,7 @@ const cardData: CardData[] = [
     title: "Luxzary bed for you",
     slug: createSlug(title),
      category:"new arraival",
-    image: image4.src,
+    image: image7.src,
     price: 8500,
     oldPrice: 9650,
     discount: 650,
@@ -91,7 +88,7 @@ const cardData: CardData[] = [
     title: "Classic bed for you",
     slug: createSlug(title),
      category:"new arraival",
-    image: image5.src,
+    image: image6.src,
     price: 8500,
     oldPrice: 9650,
     discount: 650,
@@ -101,7 +98,7 @@ const cardData: CardData[] = [
     title: "Kid's Furnitue for you",
     slug: createSlug(title),
      category:"new arraival",
-    image: image6.src,
+    image: image5.src,
     price: 8500,
     oldPrice: 9650,
     discount: 650,
@@ -148,9 +145,11 @@ const cardData: CardData[] = [
   },
 ]
 
-const NewArraivalProduct = () => {
+const SimilarProduct = () => {
   return (
-<div className="relative mt-8">
+    <div>
+        <CardTitle className='text-center font-semibold lg:text-xl'>Some Similar Products</CardTitle>
+        <div className="relative mt-4">
       <Carousel>
         <CarouselContent>
           {cardData.map((card) => (
@@ -196,7 +195,8 @@ const NewArraivalProduct = () => {
         <CarouselNext />
       </Carousel>
   </div>
+    </div>
   )
 }
 
-export default NewArraivalProduct
+export default SimilarProduct
