@@ -5,7 +5,7 @@ import Section from '@/components/layout/Section'
 import BestSallerProduct from '@/components/molecules/best-saller/BestSallerProduct'
 import React from 'react'
 
-const BestSaller = () => {
+const BestSelling = () => {
   return (
     <Section className='py-5 md:py-10'>
         <MaxWidthWrapper>
@@ -17,4 +17,4 @@ const BestSaller = () => {
   )
 }
 
-export default BestSaller
+export default BestSelling

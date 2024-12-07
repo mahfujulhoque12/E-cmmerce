@@ -23,22 +23,24 @@ interface MenuDataItem {
 // Correct menuData type to be an array of MenuDataItem
 
 const menuData: MenuDataItem[] = [
-  { label: "Kids Furniture", href: "#" },
+  { label: "Kids Furniture", href: "/shop" },
 
-   { label: "Bachelor Furniture", href: "#" },
-   { label: "Family Furniture", href: "#" },
+   { label: "Bachelor Furniture", href: "/shop" },
+   { label: "Leather Furniture", href: "#" },
+
+   { label: "Bed Room Furniture", href: "/shop" },
   {
   
     label: "House Furniture",
-    href: "#",
+    href: "/shop",
     nestedMenu: [
       {
         heading: "Interiors",
         submenu: [
-          { label: "House Chair", href: "#" },
+          { label: "House Chair", href: "/shop" },
           {
             label: "House Table",
-            href: "#",
+            href: "/shop",
           },
         
         ],
@@ -48,9 +50,9 @@ const menuData: MenuDataItem[] = [
         submenu: [
           {
             label: "House Cabinet",
-            href: "#",
+            href: "/shop",
           },
-          { label: "House Sofa", href: "#" },
+          { label: "House Sofa", href: "/shop" },
         ],
       },
       {
@@ -59,7 +61,7 @@ const menuData: MenuDataItem[] = [
           { label: "House Waredrobe", href: "#" },
           {
             label: "House Corner Shelf",
-            href: "#",
+            href: "/shop",
           },
         ],
       },
@@ -67,7 +69,7 @@ const menuData: MenuDataItem[] = [
   },
   {
     label: "Office Furniture ",
-    href: "#",
+    href: "/shop",
     nestedMenu: [
       {
         heading: "Design Ideas",
@@ -75,7 +77,7 @@ const menuData: MenuDataItem[] = [
           { label: "Office Chair", href: "#" },
           {
             label: "Office Sofa",
-            href: "#",
+            href: "/shop",
           },
          
         ],
@@ -86,7 +88,7 @@ const menuData: MenuDataItem[] = [
           { label: "Office File Cabinet", href: "#" },
           {
             label: "Office Work Station",
-            href: "#",
+            href: "/shop",
           },
  
         ],
@@ -94,13 +96,15 @@ const menuData: MenuDataItem[] = [
       {
         heading: "Design Ideas",
         submenu: [
-          { label: "Office Table", href: "#" },
-          { label: "Office Book Shelf", href: "#" },
+          { label: "Office Table", href: "/shop" },
+          { label: "Office Book Shelf", href: "/shop" },
 
         ],
       },
     ],
   },
+
+
  
   {
     label: "Shop ",
@@ -113,88 +117,43 @@ const menuData: MenuDataItem[] = [
           { label: "Office Furniture",href: "#", },
           { label: "Wall Art & Mirrors",href: "#", },
           { label: "Curtains & Blinds",href: "#", },
-          { label: "Rugs & Mats",href: "/rugs-mats", },
-          { label: "Lighting Solutions",href: "/lighting-solutions", },
-          { label: "Compact & Space-Saving Furniture",href: "/compact-space-saving-furniture",},
+          { label: "Rugs & Mats",href: "#", },
+          { label: "Lighting Solutions",href: "#", },
+          { label: "Compact & Space-Saving Furniture",href: "#",},
         ],
       },
 
      {
         heading: "Furniture Category",
         submenu: [
-          { label: "Multi-Functional Furniture", href: "/multi-functional-furniture" },
-          { label: "Rattan & Bamboo Furniture",href: "/rattan-bamboo-furniture", },
-          { label: "Leather Furniture",href: "/leather-furniture", },
-          { label: "Fabric Furniture",href: "/fabric-furniture", },
-          { label: "Glass Furniture",href: "/glass-furniture", },
-          { label: "Metal Furniture",href: "/metal-furniture", },
-          { label: "Wooden Furniture",href: "/wooden-furniture",},
+          { label: "Multi-Functional Furniture", href: "#" },
+          { label: "Rattan & Bamboo Furniture",href: "#", },
+          { label: "Leather Furniture",href: "#", },
+          { label: "Fabric Furniture",href: "#", },
+          { label: "Glass Furniture",href: "#", },
+          { label: "Metal Furniture",href: "#", },
+          { label: "Wooden Furniture",href: "#",},
         ],
       },
 
       {
         heading: "Furniture Category",
         submenu: [
-          { label: "Luxury Furniture", href: "/luxury-furniture" },
-          { label: "Scandinavian Furniture",href: "/scandinavian-furniture", },
-          { label: "Classic Furniture",href: "/classic-furniture", },
-          { label: "Modern Furniture",href: "/modern-furniture", },
-          { label: "TV Units & Media Stands",href: "/tv-units", },
-          { label: "Entryway Furniture",href: "/entryway-furniture", },
-          { label: "Kid's Furniture",href: "/kids-furniture",},
-          { label: "Outdoor Furniture",href: "/outdoor-furniture",},
+          { label: "Luxury Furniture", href: "#" },
+          { label: "Scandinavian Furniture",href: "#", },
+          { label: "Classic Furniture",href: "#", },
+          { label: "Modern Furniture",href: "#", },
+          { label: "TV Units & Media Stands",href: "#", },
+          { label: "Entryway Furniture",href: "#", },
+          { label: "Kid's Furniture",href: "#",},
+          { label: "Outdoor Furniture",href: "#",},
         ],
       },
 
     ],
   },
 
-  {
-    label: "Category ",
-    href: "/category",
-    nestedMenu: [
-      {
-        heading: "Furniture Category",
-        submenu: [
-          { label: "House Furniture", href: "#" },
-          { label: "Office Furniture",href: "#", },
-          { label: "Wall Art & Mirrors",href: "/wall-art-mirrors", },
-          { label: "Curtains & Blinds",href: "/curtains-blinds", },
-          { label: "Rugs & Mats",href: "/rugs-mats", },
-          { label: "Lighting Solutions",href: "/lighting-solutions", },
-          { label: "Compact & Space-Saving Furniture",href: "/compact-space-saving-furniture",},
-        ],
-      },
 
-     {
-        heading: "Furniture Category",
-        submenu: [
-          { label: "Multi-Functional Furniture", href: "/multi-functional-furniture" },
-          { label: "Rattan & Bamboo Furniture",href: "/rattan-bamboo-furniture", },
-          { label: "Leather Furniture",href: "/leather-furniture", },
-          { label: "Fabric Furniture",href: "/fabric-furniture", },
-          { label: "Glass Furniture",href: "/glass-furniture", },
-          { label: "Metal Furniture",href: "/metal-furniture", },
-          { label: "Wooden Furniture",href: "/wooden-furniture",},
-        ],
-      },
-
-      {
-        heading: "Furniture Category",
-        submenu: [
-          { label: "Luxury Furniture", href: "/luxury-furniture" },
-          { label: "Scandinavian Furniture",href: "/scandinavian-furniture", },
-          { label: "Classic Furniture",href: "/classic-furniture", },
-          { label: "Modern Furniture",href: "/modern-furniture", },
-          { label: "TV Units & Media Stands",href: "/tv-units", },
-          { label: "Entryway Furniture",href: "/entryway-furniture", },
-          { label: "Kid's Furniture",href: "/kids-furniture",},
-          { label: "Outdoor Furniture",href: "/outdoor-furniture",},
-        ],
-      },
-
-    ],
-  },
 
 
 

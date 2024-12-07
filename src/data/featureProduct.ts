@@ -54,7 +54,7 @@ export const cardData: CardData[] = [
   {
     id: 1,
     title: "Simpel bed for you and your family",
-    slug: createSlug("Simpel bed for you and your family"),
+    slug: createSlug("Simpel bed for you and your family featured"),
    
     image: image1.src,
     price: 8500,
@@ -67,7 +67,7 @@ export const cardData: CardData[] = [
   {
     id: 2,
     title: "Speacial bed for you",
-    slug: createSlug("Speacial bed for you"),
+    slug: createSlug("Speacial bed for you featured"),
     image: image2.src,
     price: 8500,
     oldPrice: 9650,
@@ -79,7 +79,7 @@ export const cardData: CardData[] = [
   {
     id: 3,
     title: "Normal bed for you",
-    slug: createSlug("Normal bed for you"),
+    slug: createSlug("Normal bed for you featured"),
     image: image3.src,
     price: 8500,
     oldPrice: 9650,
@@ -92,7 +92,7 @@ export const cardData: CardData[] = [
 
     id: 4,
     title: "Luxzary bed for you",
-    slug: createSlug("Luxzary bed for you"),
+    slug: createSlug("Luxzary bed for you featured"),
     image: image4.src,
     price: 8500,
     oldPrice: 9650,
@@ -104,7 +104,7 @@ export const cardData: CardData[] = [
   {
     id: 5,
     title: "Classic bed for you",
-    slug: createSlug("Classic bed for you"),
+    slug: createSlug("Classic bed for you featured"),
     image: image5.src,
     price: 8500,
     oldPrice: 9650,
@@ -116,7 +116,7 @@ export const cardData: CardData[] = [
   {
     id: 6,
     title: "Kid's Furnitue for you",
-    slug: createSlug("Kid's Furnitue for you"),
+    slug: createSlug("Kid's Furnitue for you featured" ),
     image: image6.src,
     price: 8500,
     oldPrice: 9650,
@@ -128,7 +128,7 @@ export const cardData: CardData[] = [
   {
     id: 7,
     title: "Classic Kid's Furnitue",
-    slug: createSlug("Classic Kid's Furnitue"),
+    slug: createSlug("Classic Kid's Furnitue featured"),
     image: image7.src,
     price: 8500,
     oldPrice: 9650,
@@ -140,7 +140,7 @@ export const cardData: CardData[] = [
   {
     id: 8,
     title: "Simple Chair For you",
-    slug: createSlug("Simple Chair For you"),
+    slug: createSlug("Simple Chair For you featured"),
     image: image8.src,
     price: 8500,
     oldPrice: 9650,
@@ -152,7 +152,7 @@ export const cardData: CardData[] = [
   {
     id: 9,
     title: "Normal Chair For you",
-    slug: createSlug("Normal Chair For you"),
+    slug: createSlug("Normal Chair For you featured"),
     image: image9.src,
     price: 8500,
     oldPrice: 9650,
@@ -164,7 +164,7 @@ export const cardData: CardData[] = [
   {
     id: 10,
     title: "Simple Light For you",
-    slug: createSlug("Simple Light For you"),
+    slug: createSlug("Simple Light For you featured"),
     image: image10.src,
     price: 8500,
     oldPrice: 9650,
@@ -176,7 +176,7 @@ export const cardData: CardData[] = [
   {
     id: 11,
     title: "Normal Light For you",
-    slug: createSlug( "Normal Light For you"),
+    slug: createSlug( "Normal Light For you featured"),
     image: image11.src,
     price: 8500,
     oldPrice: 9650,
@@ -188,7 +188,7 @@ export const cardData: CardData[] = [
   {
     id: 12,
     title: "Classic Light For you",
-    slug: createSlug( "Classic Light For you"),
+    slug: createSlug( "Classic Light For you featured"),
     image: image12.src,
     price: 8500,
     oldPrice: 9650,
@@ -200,7 +200,7 @@ export const cardData: CardData[] = [
   {
     id: 13,
     title: "Luxzary Light For you",
-    slug: createSlug("Luxzary Light For you"),
+    slug: createSlug("Luxzary Light For you featured"),
     image: image13.src,
     price: 8500,
     oldPrice: 9650,
@@ -212,7 +212,7 @@ export const cardData: CardData[] = [
   {
     id: 14,
     title: "Luxzary Office Chair",
-    slug: createSlug("Luxzary Office Chair"),
+    slug: createSlug("Luxzary Office Chair featured"),
     image: image15.src,
     price: 8500,
     oldPrice: 9650,
@@ -224,7 +224,7 @@ export const cardData: CardData[] = [
   {
     id: 15,
     title: "Simple Office Chair",
-    slug: createSlug("Simple Office Chair"),
+    slug: createSlug("Simple Office Chair featured"),
     image: image27.src,
     price: 8500,
     oldPrice: 9650,
@@ -236,7 +236,7 @@ export const cardData: CardData[] = [
   {
     id: 16,
     title: "Normal Office Chair",
-    slug: createSlug( "Normal Office Chair"),
+    slug: createSlug( "Normal Office Chair featured"),
     image: image16.src,
     price: 8500,
     oldPrice: 9650,
@@ -248,7 +248,7 @@ export const cardData: CardData[] = [
   {
     id: 17,
     title: "Clissic Office Chair",
-    slug: createSlug( "Clissic Office Chair"),
+    slug: createSlug( "Clissic Office Chair featured"),
     image: image17.src,
     price: 8500,
     oldPrice: 9650,
@@ -260,7 +260,7 @@ export const cardData: CardData[] = [
   {
     id: 18,
     title: "Luxzary Office Chair two",
-    slug: createSlug("Luxzary Office Chair two"),
+    slug: createSlug("Luxzary Office Chair two featured"),
     image: image18.src,
     price: 8500,
     oldPrice: 9650,
@@ -272,7 +272,7 @@ export const cardData: CardData[] = [
   {
     id: 19,
     title: "Luxzary Office Sofa",
-    slug: createSlug("Luxzary Office Sofa"),
+    slug: createSlug("Luxzary Office Sofa featured"),
     image: image19.src,
     price: 8500,
     oldPrice: 9650,
@@ -284,7 +284,7 @@ export const cardData: CardData[] = [
   {
     id: 20,
     title: "Luxzary Office Chair two",
-    slug: createSlug("Luxzary Office Chair two"),
+    slug: createSlug("Luxzary Office Chair two featured"),
     image: image20.src,
     price: 8500,
     oldPrice: 9650,
@@ -296,7 +296,7 @@ export const cardData: CardData[] = [
   {
     id: 21,
     title: "Luxzary Office Sofa Three",
-    slug: createSlug("Luxzary Office Sofa Three"),
+    slug: createSlug("Luxzary Office Sofa Three featured"),
     image: image21.src,
     price: 8500,
     oldPrice: 9650,
@@ -308,7 +308,7 @@ export const cardData: CardData[] = [
   {
     id: 22,
     title: "Simplle Office Sofa",
-    slug: createSlug("Simplle Office Sofa"),
+    slug: createSlug("Simplle Office Sofa featured"),
     image: image22.src,
     price: 8500,
     oldPrice: 9650,
@@ -320,7 +320,7 @@ export const cardData: CardData[] = [
   {
     id: 23,
     title: "Noraml Office Sofa",
-    slug: createSlug("Noraml Office Sofa"),
+    slug: createSlug("Noraml Office Sofa featured"),
     image: image23.src,
     price: 8500,
     oldPrice: 9650,
@@ -332,7 +332,7 @@ export const cardData: CardData[] = [
   {
     id: 24,
     title: "Classic Office sofa",
-    slug: createSlug("Classic Office sofa"),
+    slug: createSlug("Classic Office sofa featured"),
     image: image24.src,
     price: 8500,
     oldPrice: 9650,
@@ -344,7 +344,7 @@ export const cardData: CardData[] = [
   {
     id: 25,
     title: "Classic Office Table",
-    slug: createSlug("Classic Office Table"),
+    slug: createSlug("Classic Office Table featured"),
     image: image25.src,
     price: 8500,
     oldPrice: 9650,
@@ -356,7 +356,7 @@ export const cardData: CardData[] = [
   {
     id: 26,
     title: "Noraml Office Table",
-    slug: createSlug( "Noraml Office Table"),
+    slug: createSlug( "Noraml Office Table featured"),
     image: image26.src,
     price: 8500,
     oldPrice: 9650,
@@ -368,7 +368,7 @@ export const cardData: CardData[] = [
   {
     id: 27,
     title: "Classic Office Table Two",
-    slug: createSlug("Classic Office Table Two"),
+    slug: createSlug("Classic Office Table Two featured"),
     image: image28.src,
     price: 8500,
     oldPrice: 9650,
@@ -380,7 +380,7 @@ export const cardData: CardData[] = [
   {
     id: 28,
     title: "Noraml Office Table",
-    slug: createSlug("Noraml Office Table"),
+    slug: createSlug("Noraml Office Table featured"),
     image: image30.src,
     price: 8500,
     oldPrice: 9650,
@@ -392,7 +392,7 @@ export const cardData: CardData[] = [
   {
     id: 29,
     title: "Luxzary Office Table",
-    slug: createSlug( "Luxzary Office Table"),
+    slug: createSlug( "Luxzary Office Table featured"),
     image: image29.src,
     price: 8500,
     oldPrice: 9650,
