@@ -4,14 +4,13 @@ import React from "react";
 import { IoMdMenu } from "react-icons/io";
 import { FaMessage } from "react-icons/fa6";
 import { IoMdHome } from "react-icons/io";
-import { FaShoppingCart } from "react-icons/fa";
-
 import { FaUserAlt } from "react-icons/fa";
+import AddToCart from "../top-header/AddToCart";
 
 
 const FooterCus:React.FC = () => {
   return (
-    <div className="flex justify-between items-center gap-4 bg-white py-2 ">
+    <div className="flex justify-between items-center gap-4 bg-white py-2">
       <div className="flex flex-col justify-center items-center">
         <Link href="">
           <IoMdMenu size={20} />
@@ -37,13 +36,16 @@ const FooterCus:React.FC = () => {
    
       </div>
 
-      <div className="flex flex-col justify-center items-center ">
-        <Link href="">
-          <FaShoppingCart  size={20} />
-        </Link>
-        <Paragraph className="text-sm font-semibold text-black">
-          cart(0)
-        </Paragraph>
+      <div className="flex flex-col justify-center items-center  ">
+        <div className="">
+        <AddToCart/>
+        <Paragraph className="text-sm mt-[-10px] font-semibold text-black ">
+        cart
+      </Paragraph>
+  
+        </div>
+     
+      
       </div>
 
      
@@ -51,7 +53,7 @@ const FooterCus:React.FC = () => {
         <Link href="">
           <FaUserAlt   size={20} />
         </Link>
-        <Paragraph className="text-sm font-semibold text-black">
+      <Paragraph className="text-sm  font-semibold text-black">
           Login
         </Paragraph>
       </div>

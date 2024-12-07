@@ -1,10 +1,13 @@
 import MaxWidthWrapper from '@/components/layout/MaxWidthWrapper'
 import Section from '@/components/layout/Section'
+import Breadcumb from '@/components/molecules/breadcumb/Breadcumb';
 import Interested from '@/components/molecules/product-details/Interested';
-import ProductImg from '@/components/molecules/product-details/ProductImg'
+import ProductImg from '@/components/molecules/product-details/ProductImg';
 import ProductInfo from '@/components/molecules/product-details/ProductInfo';
 import RecentView from '@/components/molecules/product-details/RecentView';
 import SimilarProduct from '@/components/molecules/product-details/SimilarProduct';
+
+
 import React from 'react'
 
 interface ProductDetailsProps {
@@ -14,7 +17,7 @@ const ProductDetails:React.FC<ProductDetailsProps> = ({slug}) => {
   return (
     <Section className='py-5 md:py-10'>
         <MaxWidthWrapper>
-
+        <Breadcumb/>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
             <div>
                 <ProductImg slug={slug}/>
