@@ -12,6 +12,8 @@ const ShopProduct = () => {
   const [filteredProducts, setFilteredProducts] = useState(cardData);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [isFilterVisible, setFilterVisible] = useState(false);
+
 
   const handlePriceFilterChange = (products: typeof cardData) => {
     applyFilters(products, selectedBrands, selectedCategories);
@@ -74,19 +76,33 @@ const ShopProduct = () => {
     setFilteredProducts(updatedProducts);
   };
 
+  const toggleFilter = () => {
+    setFilterVisible(!isFilterVisible);
+  };
+
   return (
     <div>
        <ShortFilter onSortChange={handleSortChange} />
-    <div className="flex gap-4 mt-5">
-      <div className="basis-[35%]">
-        <PriceFilter onFilterChange={handlePriceFilterChange} />
-        <BrandFilter onFilterChange={handleBrandFilterChange} />
-        <Availability />
-        <CategoryFilter onFilterChange={handleCategoryFilterChange} />
-      </div>
+    <div className="flex flex-col sm:flex-row gap-4 mt-5">
+    <div className="basis-full md:basis-[35%]  p-2 md:p-0  md:bg-transparent">
+          {/* Mobile Filter Toggle */}
+          <button
+            className="sm:hidden bg-gray-50 border shadow-sm text-sm p-2 rounded mb-2"
+            onClick={toggleFilter}
+          >
+            {isFilterVisible ? "Hide Filters" : "Show Filters"}
+          </button>
+          <div className={`${isFilterVisible ? "block" : "hidden"} sm:block`}>
+            <PriceFilter onFilterChange={handlePriceFilterChange} />
+            <BrandFilter onFilterChange={handleBrandFilterChange} />
+            <Availability />
+            <CategoryFilter onFilterChange={handleCategoryFilterChange} />
+          </div>
+        </div>
+
       <div className="basis-[65%]">
        
-        <div className="max-h-[920px] overflow-x-auto hide-scrollbar">
+        <div className="max-h-[950px] overflow-x-auto hide-scrollbar">
           <ShopSingleProducts products={filteredProducts} />
         </div>
       </div>

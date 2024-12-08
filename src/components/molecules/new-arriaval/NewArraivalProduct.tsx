@@ -4,6 +4,7 @@ import Image from "next/image";
 import CardTitle from "@/components/atoms/CardTitle";
 import Paragraph from "@/components/atoms/Paragraph";
 import Span from "@/components/atoms/Span";
+import AddWishlist from "../shop/AddWishlist";
 import {
     Carousel,
     CarouselContent,
@@ -28,7 +29,7 @@ const NewArraivalProduct = () => {
         <CarouselContent>
           {cardData.map((card) => (
             <CarouselItem  key={card.id} className=" basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
-              <div onClick={()=>handleDetails(card.slug)} className="border shadow-md hover:shadow-lg rounded-md relative cursor-pointer group flex flex-col h-full">
+              <div  className="border shadow-md hover:shadow-lg rounded-md relative  group flex flex-col h-full">
                 <div className="px-4 flex justify-center items-center overflow-hidden">
                   <Image
                     src={card.image}
@@ -45,7 +46,7 @@ const NewArraivalProduct = () => {
                     {card.title}
                   </CardTitle>
 
-                  <div className=" mt-3 flex items-center justify-start gap-3 ">
+                  <div className=" mt-3 flex items-center justify-start gap-3 mb-2">
                     <Paragraph className="text-base lg:text-lg font-semibold text-sky-700 mt-auto">
                       {card.price}৳
                     </Paragraph>
@@ -58,7 +59,10 @@ const NewArraivalProduct = () => {
                   </Span>
                   <div>
 
-                  <Button variant="mediumRoundedBtn" className="bg-white text-sky-700 hover:text-sky-800 hover:bg-white">See Details</Button>
+                   {/* Pass card as item prop to AddWishlist */}
+                 <AddWishlist item={{ id: card.id, name: card.title, price: card.price, image: card.image }} />
+
+                  <Button  onClick={()=>handleDetails(card.slug)} variant="mediumRoundedBtn" className="bg-white text-sky-700 hover:text-sky-800 hover:bg-white">See Details</Button>
                   </div>
                 </div>
               </div>
