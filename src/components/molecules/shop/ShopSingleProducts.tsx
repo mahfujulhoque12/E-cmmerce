@@ -5,6 +5,7 @@ import Span from "@/components/atoms/Span";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import AddWishlist from './AddWishlist';
 
 type Product = {
   id: number;
@@ -14,7 +15,7 @@ type Product = {
   oldPrice: number;
   brand: string;
   discount: number;
-  slug:string;
+  slug: string;
 };
 
 type ShopSingleProductsProps = {
@@ -22,18 +23,19 @@ type ShopSingleProductsProps = {
 };
 
 const ShopSingleProducts: React.FC<ShopSingleProductsProps> = ({ products }) => {
-  const router = useRouter()
-  const handleDetails = (slug:string) =>{
-    router.push(`/shop/${slug}`)
-  } 
+  const router = useRouter();
+
+  const handleDetails = (slug: string) => {
+    router.push(`/shop/${slug}`);
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       {products.length > 0 ? (
         products.map((card) => (
           <div
-            className="border shadow-md hover:shadow-lg rounded-md relative cursor-pointer group flex flex-col h-full"
+            className="border shadow-md hover:shadow-lg rounded-md relative group flex flex-col h-full"
             key={card.id}
-            onClick={()=>handleDetails(card.slug)}
           >
             <div className="px-4 flex justify-center items-center overflow-hidden">
               <Image
@@ -64,8 +66,13 @@ const ShopSingleProducts: React.FC<ShopSingleProductsProps> = ({ products }) => 
               <Span className="absolute top-2 left-0 bg-purple-500 px-3 py-1 rounded-r-full text-sm font-medium text-white">
                 Save: {card.discount}৳
               </Span>
+
+              {/* Pass card as item prop to AddWishlist */}
+              <AddWishlist item={{ id: card.id, name: card.title, price: card.price, image: card.image }} />
+
               <div>
                 <Button
+                  onClick={() => handleDetails(card.slug)}
                   variant="mediumRoundedBtn"
                   className="bg-white text-sky-700 hover:text-sky-800 hover:bg-white"
                 >

@@ -14,6 +14,7 @@ import { Button } from "@/components/atoms/Button";
   
 import {useRouter} from 'next/navigation';
 import { cardData } from "@/data/bestSelling";
+import AddWishlist from "../shop/AddWishlist";
 
 
 const BestSallerProduct = () => {
@@ -27,7 +28,7 @@ const BestSallerProduct = () => {
         <CarouselContent>
           {cardData.map((card) => (
             <CarouselItem key={card.id} className=" basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
-              <div onClick={()=>handleDetaisl(card.slug)} className="border shadow-md hover:shadow-lg rounded-md relative cursor-pointer group flex flex-col h-full">
+              <div  className="border shadow-md hover:shadow-lg rounded-md relative cursor-pointer group flex flex-col h-full">
                 <div className="px-4 flex justify-center items-center overflow-hidden">
                   <Image
                     src={card.image}
@@ -57,7 +58,10 @@ const BestSallerProduct = () => {
                   </Span>
                   <div>
 
-                  <Button variant="mediumRoundedBtn" className="bg-white text-sky-700 hover:text-sky-800 hover:bg-white">See Details</Button>
+                     {/* Pass card as item prop to AddWishlist */}
+           <AddWishlist item={{ id: card.id, name: card.title, price: card.price, image: card.image }} />
+
+                  <Button onClick={()=>handleDetaisl(card.slug)} variant="mediumRoundedBtn" className="bg-white text-sky-700 hover:text-sky-800 hover:bg-white">See Details</Button>
                   </div>
                 </div>
               </div>

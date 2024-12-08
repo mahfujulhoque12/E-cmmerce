@@ -1,21 +1,31 @@
-"use client"
+"use client";
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
-export  interface CartItem {
+export interface CartItem {
   id: number;
   name: string;
-  title?:string;
+  title?: string;
   price: number;
   quantity: number;
-  image :string;
+  image: string;
+}
+
+export interface WishlistItem {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
 }
 
 interface CartContextType {
   cartItems: CartItem[];
+  wishlistItems: WishlistItem[];
   addToCart: (item: CartItem) => void;
   updateCartItem: (id: number, quantity: number) => void;
   removeFromCart: (id: number) => void;
-  resetItemFlag:(id:number) => void;
+  resetItemFlag: (id: number) => void;
+  addToWishlist: (item: WishlistItem) => void;
+  removeFromWishlist: (id: number) => void;
   subtotal: number;
   total: number;
 }
@@ -24,7 +34,8 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [resetItemId, setResetItemId] = useState<number | null>(null); 
+  const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
+  const [resetItemId, setResetItemId] = useState<number | null>(null);
   const [subtotal, setSubtotal] = useState(0);
   const taxRate = 0.05;
 
@@ -35,12 +46,21 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       setCartItems(parsedItems);
       updateSubtotal(parsedItems);
     }
+
+    const storedWishlistItems = localStorage.getItem("wishlistItems");
+    if (storedWishlistItems) {
+      setWishlistItems(JSON.parse(storedWishlistItems));
+    }
   }, []);
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     updateSubtotal(cartItems);
   }, [cartItems]);
+
+  useEffect(() => {
+    localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+  }, [wishlistItems]);
 
   const updateSubtotal = (items: CartItem[]) => {
     const subtotalAmount = items.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -80,15 +100,36 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     if (resetItemId === id) setResetItemId(null); // Clear reset flag after reset is handled
   };
 
+  const addToWishlist = (item: WishlistItem | null) => {
+    if (!item) {
+      console.error("Invalid item passed to addToWishlist");
+      return;
+    }
+  
+    setWishlistItems((prevItems) => {
+      if (!prevItems.find((wishlistItem) => wishlistItem.id === item.id)) {
+        return [...prevItems, item];
+      }
+      return prevItems;
+    });
+  };
+  
+
+  const removeFromWishlist = (id: number) => {
+    setWishlistItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
 
   return (
     <CartContext.Provider
       value={{
         cartItems,
+        wishlistItems,
         addToCart,
         updateCartItem,
         removeFromCart,
         resetItemFlag,
+        addToWishlist,
+        removeFromWishlist,
         subtotal,
         total: subtotal + subtotal * taxRate,
       }}

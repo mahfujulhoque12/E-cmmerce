@@ -5,16 +5,19 @@ import { FaUserCheck } from "react-icons/fa";
 import { IoMdHeart } from "react-icons/io";
 import { VscGitCompare } from "react-icons/vsc";
 import AddToCart from './AddToCart';
-
+import Span from '@/components/atoms/Span';
+import { useCart } from "@/context/CartContext";
 
 
 
 const Account = () => {
+  const { wishlistItems} = useCart();
   return (
     <div className='flex justify-center items-center gap-5'>
-       <Link href="#">
+       <Link href="/wishlist">
         
-        <Paragraph className='text-white flex justify-center items-center gap-2'>Wishlist <IoMdHeart size={20} className='text-white'/>
+        <Paragraph className='text-white relative flex justify-center items-center gap-2'>Wishlist <IoMdHeart size={20} className='text-white'/>
+        <Span className="absolute top-[-16px] right-[-10px]">({wishlistItems.length})</Span>
         </Paragraph>
         </Link>
 

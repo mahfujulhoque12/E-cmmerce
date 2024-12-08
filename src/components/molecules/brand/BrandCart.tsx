@@ -52,7 +52,7 @@ const BrandCart = () => {
     <div>
       <Heading className='text-center'>Our Partner</Heading>
     
-      <div className="flex flex-col justify-center items-center sm:flex-row gap-4">
+      <div className="flex flex-col justify-center items-center sm:flex-row gap-4 pb-24 md:pb-0">
       {brandData.map((brand) => (
         <div key={brand.id} >
           <Image src={brand.img} width={300} height={150} alt="img" className='w-[150px] sm:w-full  h-[80px] sm:h-full mt-4'/>
