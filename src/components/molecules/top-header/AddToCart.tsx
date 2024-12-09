@@ -39,8 +39,8 @@ const AddToCart: React.FC = () => {
     <div >
       <Button onClick={toggleDrawer} className="relative ">
         <div className="flex items-center gap-2">
-          <Span className="hidden md:block">Cart</Span>
-          <FaBasketShopping size={25} className="text-black md:text-white" />
+          <Span className="hidden md:block text-sm">Cart</Span>
+          <FaBasketShopping size={20} className="text-black md:text-white" />
         </div>
         <Paragraph className="absolute top-[-13px] right-[-13px] text-black md:text-white">
           ({cartItems.length})

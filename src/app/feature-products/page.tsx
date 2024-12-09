@@ -1,3 +1,4 @@
+'use client';
 import Heading from '@/components/atoms/Heading'
 import Paragraph from '@/components/atoms/Paragraph'
 import MaxWidthWrapper from '@/components/layout/MaxWidthWrapper'

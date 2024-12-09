@@ -7,6 +7,7 @@ import Footer from "@/components/organisms/footer/Footer";
 import NavSearchBar from "@/components/molecules/navbar/NavSearchBar";
 import DesktopFooter from "@/components/organisms/footer/DesktopFooter";
 import { CartProvider } from "@/context/CartContext";
+import { SearchProvider } from "@/context/SearchContext";
 
 const openSans = localFont({
   src: "./fonts/OpenSans-VariableFont_wdth,wght.ttf",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} font-opensans antialiased`}
       >
+        <SearchProvider>
         <CartProvider>
         <TopHeader/>
         <Navigation />
@@ -37,6 +39,7 @@ export default function RootLayout({
         <Footer/>
         <DesktopFooter/>
         </CartProvider>
+        </SearchProvider>
       
       </body>
     </html>
