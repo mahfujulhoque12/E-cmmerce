@@ -37,8 +37,9 @@ function createSlug(text: string): string {
     .replace(/^-+|-+$/g, ""); // Remove leading or trailing hyphens
 }
 
-type CardData = {
+export type CardData = {
   id: number;
+  source:string;
   slug: string;
   image: string;
   price: number;
@@ -48,12 +49,15 @@ type CardData = {
   moreImg:string[];
   des:string;
   brand:string;
+  category:string;
 };
 
 export const cardData: CardData[] = [
   {
     id: 1,
-    title: "Simpel bed for you and your family",
+    category:"none",
+    title: "Simpel bed for test feature product",
+    source:"feature-products",
     slug: createSlug("Simpel bed for you and your family featured"),
    
     image: image1.src,
@@ -66,7 +70,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 2,
+    category:"none",
     title: "Speacial bed for you",
+    source:"feature-products",
     slug: createSlug("Speacial bed for you featured"),
     image: image2.src,
     price: 8500,
@@ -78,7 +84,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 3,
+    category:"none",
     title: "Normal bed for you",
+    source:"feature-products",
     slug: createSlug("Normal bed for you featured"),
     image: image3.src,
     price: 8500,
@@ -91,7 +99,9 @@ export const cardData: CardData[] = [
   {
 
     id: 4,
+    category:"none",
     title: "Luxzary bed for you",
+    source:"feature-products",
     slug: createSlug("Luxzary bed for you featured"),
     image: image4.src,
     price: 8500,
@@ -103,7 +113,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 5,
+    category:"none",
     title: "Classic bed for you",
+    source:"feature-products",
     slug: createSlug("Classic bed for you featured"),
     image: image5.src,
     price: 8500,
@@ -115,7 +127,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 6,
+    category:"none",
     title: "Kid's Furnitue for you",
+    source:"feature-products",
     slug: createSlug("Kid's Furnitue for you featured" ),
     image: image6.src,
     price: 8500,
@@ -127,7 +141,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 7,
+    category:"none",
     title: "Classic Kid's Furnitue",
+    source:"feature-products",
     slug: createSlug("Classic Kid's Furnitue featured"),
     image: image7.src,
     price: 8500,
@@ -139,7 +155,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 8,
+    category:"none",
     title: "Simple Chair For you",
+    source:"feature-products",
     slug: createSlug("Simple Chair For you featured"),
     image: image8.src,
     price: 8500,
@@ -151,7 +169,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 9,
+    category:"none",
     title: "Normal Chair For you",
+    source:"feature-products",
     slug: createSlug("Normal Chair For you featured"),
     image: image9.src,
     price: 8500,
@@ -163,7 +183,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 10,
+    category:"none",
     title: "Simple Light For you",
+    source:"feature-products",
     slug: createSlug("Simple Light For you featured"),
     image: image10.src,
     price: 8500,
@@ -175,7 +197,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 11,
+    category:"none",
     title: "Normal Light For you",
+    source:"feature-products",
     slug: createSlug( "Normal Light For you featured"),
     image: image11.src,
     price: 8500,
@@ -187,7 +211,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 12,
+    category:"none",
     title: "Classic Light For you",
+    source:"feature-products",
     slug: createSlug( "Classic Light For you featured"),
     image: image12.src,
     price: 8500,
@@ -199,7 +225,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 13,
+    category:"none",
     title: "Luxzary Light For you",
+    source:"feature-products",
     slug: createSlug("Luxzary Light For you featured"),
     image: image13.src,
     price: 8500,
@@ -211,7 +239,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 14,
+    category:"none",
     title: "Luxzary Office Chair",
+    source:"feature-products",
     slug: createSlug("Luxzary Office Chair featured"),
     image: image15.src,
     price: 8500,
@@ -223,7 +253,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 15,
+    category:"none",
     title: "Simple Office Chair",
+    source:"feature-products",
     slug: createSlug("Simple Office Chair featured"),
     image: image27.src,
     price: 8500,
@@ -235,7 +267,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 16,
+    category:"none",
     title: "Normal Office Chair",
+    source:"feature-products",
     slug: createSlug( "Normal Office Chair featured"),
     image: image16.src,
     price: 8500,
@@ -247,7 +281,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 17,
+    category:"none",
     title: "Clissic Office Chair",
+    source:"feature-products",
     slug: createSlug( "Clissic Office Chair featured"),
     image: image17.src,
     price: 8500,
@@ -259,7 +295,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 18,
+    category:"none",
     title: "Luxzary Office Chair two",
+    source:"feature-products",
     slug: createSlug("Luxzary Office Chair two featured"),
     image: image18.src,
     price: 8500,
@@ -271,7 +309,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 19,
+    category:"none",
     title: "Luxzary Office Sofa",
+    source:"feature-products",
     slug: createSlug("Luxzary Office Sofa featured"),
     image: image19.src,
     price: 8500,
@@ -283,7 +323,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 20,
+    category:"none",
     title: "Luxzary Office Chair two",
+    source:"feature-products",
     slug: createSlug("Luxzary Office Chair two featured"),
     image: image20.src,
     price: 8500,
@@ -295,7 +337,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 21,
+    category:"none",
     title: "Luxzary Office Sofa Three",
+    source:"feature-products",
     slug: createSlug("Luxzary Office Sofa Three featured"),
     image: image21.src,
     price: 8500,
@@ -307,7 +351,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 22,
+    category:"none",
     title: "Simplle Office Sofa",
+    source:"feature-products",
     slug: createSlug("Simplle Office Sofa featured"),
     image: image22.src,
     price: 8500,
@@ -319,7 +365,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 23,
+    category:"none",
     title: "Noraml Office Sofa",
+    source:"feature-products",
     slug: createSlug("Noraml Office Sofa featured"),
     image: image23.src,
     price: 8500,
@@ -331,7 +379,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 24,
+    category:"none",
     title: "Classic Office sofa",
+    source:"feature-products",
     slug: createSlug("Classic Office sofa featured"),
     image: image24.src,
     price: 8500,
@@ -343,7 +393,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 25,
+    category:"none",
     title: "Classic Office Table",
+    source:"feature-products",
     slug: createSlug("Classic Office Table featured"),
     image: image25.src,
     price: 8500,
@@ -355,7 +407,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 26,
+    category:"none",
     title: "Noraml Office Table",
+    source:"feature-products",
     slug: createSlug( "Noraml Office Table featured"),
     image: image26.src,
     price: 8500,
@@ -367,7 +421,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 27,
+    category:"none",
     title: "Classic Office Table Two",
+    source:"feature-products",
     slug: createSlug("Classic Office Table Two featured"),
     image: image28.src,
     price: 8500,
@@ -379,7 +435,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 28,
+    category:"none",
     title: "Noraml Office Table",
+    source:"feature-products",
     slug: createSlug("Noraml Office Table featured"),
     image: image30.src,
     price: 8500,
@@ -391,7 +449,9 @@ export const cardData: CardData[] = [
   },
   {
     id: 29,
+    category:"none",
     title: "Luxzary Office Table",
+    source:"feature-products",
     slug: createSlug( "Luxzary Office Table featured"),
     image: image29.src,
     price: 8500,

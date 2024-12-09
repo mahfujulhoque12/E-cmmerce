@@ -32,12 +32,14 @@ type CardData = {
   moreImg:string[];
   brand:string;
   des:string;
+  source:string;
 };
 
 export const cardData: CardData[] = [
   {
     id: 201,
-    title: "Simpel bed for you and your family",
+    title: "Simpel bed for  new arraival test",
+    source:"new-arraival",
     slug: createSlug( "Simpel bed for you and your family"),
     category:"new arraival",
     image: image1.src,
@@ -51,6 +53,7 @@ export const cardData: CardData[] = [
   {
     id: 202,
     title: "Speacial bed for you",
+    source:"new-arraival",
     slug: createSlug("Speacial bed for you"),
      category:"new arraival",
     image: image2.src,
@@ -65,6 +68,7 @@ export const cardData: CardData[] = [
   {
     id: 203,
     title: "Normal bed for you",
+    source:"new-arraival",
     slug: createSlug( "Normal bed for you",),
      category:"new arraival",
     image: image3.src,
@@ -78,6 +82,7 @@ export const cardData: CardData[] = [
   {
     id: 204,
     title: "Luxzary bed for you",
+    source:"new-arraival",
     slug: createSlug( "Luxzary bed for you"),
      category:"new arraival",
     image: image4.src,
@@ -91,6 +96,7 @@ export const cardData: CardData[] = [
   {
     id: 205,
     title: "Classic bed for you",
+    source:"new-arraival",
     slug: createSlug( "Classic bed for you"),
      category:"new arraival",
     image: image5.src,
@@ -104,6 +110,7 @@ export const cardData: CardData[] = [
   {
     id: 206,
     title: "Kid's Furnitue for you",
+    source:"new-arraival",
     slug: createSlug("Kid's Furnitue for you"),
      category:"new arraival",
     image: image6.src,
@@ -117,6 +124,7 @@ export const cardData: CardData[] = [
   {
     id: 207,
     title: "Classic Kid's Furnitue",
+    source:"new-arraival",
     slug: createSlug("Classic Kid's Furnitue"),
      category:"new arraival",
     image: image7.src,
@@ -130,6 +138,7 @@ export const cardData: CardData[] = [
   {
     id: 208,
     title: "Simple Chair For you",
+    source:"new-arraival",
     slug: createSlug("Simple Chair For you"),
      category:"new arraival",
     image: image8.src,
@@ -143,6 +152,7 @@ export const cardData: CardData[] = [
   {
     id: 209,
     title: "Normal Chair For you",
+    source:"new-arraival",
     slug: createSlug("Normal Chair For you"),
      category:"new arraival",
     image: image9.src,
@@ -156,6 +166,7 @@ export const cardData: CardData[] = [
   {
     id: 210,
     title: "Simple Light For you",
+    source:"new-arraival",
     slug: createSlug("Simple Light For you"),
      category:"new arraival",
     image: image10.src,
