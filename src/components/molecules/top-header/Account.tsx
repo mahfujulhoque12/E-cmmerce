@@ -11,7 +11,7 @@ import { useCart } from "@/context/CartContext";
 
 
 const Account = () => {
-  const { wishlistItems} = useCart();
+  const { wishlistItems,compareItems} = useCart();
   return (
     <div className='flex justify-center items-center gap-5'>
        <Link href="/wishlist">
@@ -21,16 +21,17 @@ const Account = () => {
         </Paragraph>
         </Link>
 
-        <Link href="#">
+        <Link href="/compare">
         
-        <Paragraph className='text-white flex justify-center items-center gap-2'>Compare <VscGitCompare  size={20} className='text-white'/>
+        <Paragraph className='text-white relative flex justify-center items-center gap-2'>Compare <VscGitCompare  size={20} className='text-white'/>
+        <Span className="absolute top-[-16px] right-[-10px]">({compareItems.length})</Span>
         </Paragraph>
         </Link>
 
 
         <AddToCart/>
 
-        <Link href="#">
+        <Link href="/account">
         
         <Paragraph className='text-white flex justify-center items-center gap-2'>Account <FaUserCheck size={20} className='text-white'/>
         </Paragraph>

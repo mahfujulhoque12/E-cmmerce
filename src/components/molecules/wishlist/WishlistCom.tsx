@@ -1,8 +1,8 @@
 "use client";
+
 import React from "react";
 import { FaTrash, FaCartPlus } from "react-icons/fa";
 import { useCart } from "@/context/CartContext";
-import CardTitle from "@/components/atoms/CardTitle";
 import Image from "next/image";
 import { Button } from "@/components/atoms/Button";
 
@@ -10,45 +10,74 @@ const WishlistCom: React.FC = () => {
   const { wishlistItems, cartItems, addToCart, removeFromWishlist } = useCart();
 
   return (
-    <div className="wishlist-container p-4 pb-10">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {wishlistItems.map((item) => {
-          const isInCart = cartItems.some((cartItem) => cartItem.id === item.id); // Check if the item is in the cart
+    <div className="wishlist-container p-4 min-h-screen bg-gray-50">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        My Wishlist
+      </h1>
 
-          return (
-            <div
-              key={item.id}
-              className="wishlist-item border bg-white shadow-md rounded-md p-4 flex flex-col items-center"
-            >
-              <div className="flex justify-between w-full mb-4">
-                <CardTitle className="text-sm lg:text-lg font-semibold">
-                  {item.name}
-                </CardTitle>
-                <FaTrash
-                  className="text-red-500 cursor-pointer"
-                  onClick={() => removeFromWishlist(item.id)}
-                />
-              </div>
-              <Image
-                src={item.image}
-                alt={item.name}
-                width={200}
-                height={200}
-                className="w-24 h-24 object-cover rounded-md mb-2"
-              />
-              <p className="text-gray-700 mb-2">${item.price}</p>
-              <Button
-                variant="addToCartBtn"
-                onClick={() => addToCart({ ...item, quantity: 1 })}
-                disabled={isInCart} // Disable button if item is already in the cart
+      {wishlistItems.length === 0 ? (
+        <p className="text-center text-gray-500 text-lg">
+          Your wishlist is empty. Start adding your favorite items!
+        </p>
+      ) : (
+        <div className="space-y-6">
+          {wishlistItems.map((item) => {
+            const isInCart = cartItems.some(
+              (cartItem) => cartItem.id === item.id
+            );
+
+            return (
+              <div
+                key={item.id}
+                className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200"
               >
-                <FaCartPlus />
-                {isInCart ? "Already in Cart" : "Add to Cart"} {/* Show appropriate label */}
-              </Button>
-            </div>
-          );
-        })}
-      </div>
+                {/* Product Image */}
+                <div className="w-full md:w-1/3 h-40 relative">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    layout="fill"
+                    className="object-cover"
+                  />
+                </div>
+
+                {/* Product Details */}
+                <div className="flex-1 p-4 text-center md:text-left">
+                  <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+                    {item.name}
+                  </h2>
+                  <p className="text-md md:text-lg font-medium text-gray-600">
+                    ${item.price.toFixed(2)}
+                  </p>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex md:flex-col gap-2 p-4 justify-center md:justify-start">
+                  <Button
+                    onClick={() => addToCart({ ...item, quantity: 1 })}
+                    disabled={isInCart}
+                    className={`flex items-center justify-center gap-2 px-4 py-2 rounded-md ${
+                      isInCart
+                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                        : "bg-blue-500 hover:bg-blue-600 text-white"
+                    }`}
+                  >
+                    <FaCartPlus />
+                    {isInCart ? "In Cart" : "Add to Cart"}
+                  </Button>
+                  <button
+                    onClick={() => removeFromWishlist(item.id)}
+                    className="flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-red-500 hover:bg-red-600 text-white"
+                  >
+                    <FaTrash />
+                    Remove
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

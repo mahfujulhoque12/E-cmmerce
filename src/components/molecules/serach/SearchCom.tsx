@@ -46,7 +46,7 @@ const SearchCom = () => {
           {results.map((card) => (
             <div
               key={card.id}
-              className="border shadow-md hover:shadow-lg rounded-md relative cursor-pointer group flex flex-col h-full"
+              className="border shadow-md hover:shadow-lg rounded-md relative  group flex flex-col h-full"
             >
               <div className="px-4 flex justify-center items-center overflow-hidden">
                 <Image
