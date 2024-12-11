@@ -12,7 +12,7 @@ const ComparePage = () => {
 
   return (
     <div className="compare-container p-4 pb-10">
-      <CardTitle className="text-lg lg:text-3xl font-semibold pb-6 text-center">
+      <CardTitle className="text-lg lg:text-3xl font-semibold pb-6">
         Compare Products
       </CardTitle>
 

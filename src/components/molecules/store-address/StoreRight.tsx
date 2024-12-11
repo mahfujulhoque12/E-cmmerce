@@ -9,7 +9,7 @@ const StoreRight = () => {
     {/* Link Content */}
     <Link
         href="#"
-        className="flex gap-3 items-center text-xl font-semibold text-white relative z-10"
+        className="flex gap-3 items-center text-lg md:text-xl font-semibold text-white relative z-10"
     >
         Find Our Store <FaSearch />
     </Link>

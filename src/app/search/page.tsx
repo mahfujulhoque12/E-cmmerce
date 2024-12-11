@@ -7,7 +7,7 @@ import SearchCom from '@/components/molecules/serach/SearchCom';
 
 const SearchPage: React.FC = () => {
   return (
-    <Section className="py-5 md:py-10">
+    <Section className="py-5 md:py-10 pb-24 md:pb-10 ">
       <MaxWidthWrapper>
         <Breadcumb/>
         <Suspense fallback={<div>Loading...</div>}>
