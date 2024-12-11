@@ -94,7 +94,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
             aria-expanded={active ? "true" : "false"}
           >
             {active ? <FaMinus />
-: <FaPlus/> }
+          : <FaPlus/> }
           </button>
         )}
       </div>

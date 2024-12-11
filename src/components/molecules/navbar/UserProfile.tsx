@@ -16,7 +16,7 @@ const UserProfile = () => {
       
       
 
-        <Link href="#">
+        <Link href="/account">
         
         <Paragraph className='text-black flex justify-center items-center gap-2'> <FaUserCheck size={25} className='text-black'/>
         </Paragraph>

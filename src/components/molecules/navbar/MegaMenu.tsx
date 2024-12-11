@@ -23,16 +23,16 @@ interface MenuDataItem {
 // Correct menuData type to be an array of MenuDataItem
 
 const menuData: MenuDataItem[] = [
-  { label: "Kids Furniture", href: "/shop" },
+  { label: "Kids Furniture", href: "/shop?category=kids-furniture" },
 
-   { label: "Bachelor Furniture", href: "/shop" },
-   { label: "Leather Furniture", href: "#" },
+   { label: "Bachelor Furniture", href: "/shop?category=bachelor-furniture" },
+   { label: "Leather Furniture", href: "/shop?category=leather-furniture" },
 
-   { label: "Bed Room Furniture", href: "/shop" },
+   { label: "Bed Room Furniture", href: "/shop?category=bed-room-furniture" },
   {
   
     label: "House Furniture",
-    href: "/shop",
+    href: "/shop?category=home-furniture",
     nestedMenu: [
       {
         heading: "Interiors",

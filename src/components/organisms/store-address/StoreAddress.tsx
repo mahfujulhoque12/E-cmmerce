@@ -15,7 +15,7 @@ const StoreAddress = () => {
             <div>
                 <StoreLeft/>
             </div>
-            <div className='flex justify-end'>
+            <div className='flex justify-start mt-3 md:mt-0 md:justify-end'>
                 <StoreRight/>
             </div>
         </div>

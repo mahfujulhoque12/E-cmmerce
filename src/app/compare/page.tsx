@@ -6,7 +6,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <Section className="py-5 md:py-10">
+    <Section className='py-5 md:py-10 pb-24 md:pb-0'>
         <MaxWidthWrapper>
             <Breadcumb/>
             <Compare/>

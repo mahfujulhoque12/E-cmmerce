@@ -11,7 +11,7 @@ const AccountButton: React.FC<AccountButtonProps> = ({ isActive, label, icon, on
   return (
     <button
       onClick={onClick}
-      className={`flex items-center gap-3 text-gray-800 py-2 px-3 rounded-md ${
+      className={`flex hover:bg-blue-100 transition-all duration-200 items-center gap-3 text-gray-800 py-2 px-3 rounded-md ${
         isActive ? "bg-blue-100 font-semibold" : "bg-gray-100"
       }`}
     >

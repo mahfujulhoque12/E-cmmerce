@@ -10,11 +10,8 @@ const WishlistCom: React.FC = () => {
   const { wishlistItems, cartItems, addToCart, removeFromWishlist } = useCart();
 
   return (
-    <div className="wishlist-container p-4 min-h-screen bg-gray-50">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
-        My Wishlist
-      </h1>
-
+    <div className="wishlist-container p-4 min-h-screen ">
+  
       {wishlistItems.length === 0 ? (
         <p className="text-center text-gray-500 text-lg">
           Your wishlist is empty. Start adding your favorite items!

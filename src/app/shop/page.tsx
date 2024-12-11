@@ -7,7 +7,7 @@ import React, { Suspense } from 'react'
 
 const page = () => {
   return (
-    <Section className="py-5 md:py-10">
+    <Section className='py-5 md:py-10 pb-24 md:pb-10'>
       <MaxWidthWrapper>
         <Breadcumb />
         {/* Wrap Shop in Suspense */}

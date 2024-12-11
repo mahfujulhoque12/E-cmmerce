@@ -11,8 +11,8 @@ const StoreLeft = () => {
 
         </div>
         <div>
-            <CardTitle className='text-xl md:text-3xl font-bold text-white'>20+ Physical Stores</CardTitle>
-            <CardDescription className="text-base font-semibold text-white">Visit Our Store & Get Your Desired Furniture Product!</CardDescription>
+            <CardTitle className='text-lg md:text-3xl font-bold text-white'>20+ Physical Stores</CardTitle>
+            <CardDescription className="text-sm lg:text-base font-semibold text-white">Visit Our Store & Get Your Desired Furniture Product!</CardDescription>
         </div>
     </div>
   )
