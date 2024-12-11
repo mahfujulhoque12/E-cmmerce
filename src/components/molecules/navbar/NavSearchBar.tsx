@@ -27,7 +27,10 @@ const NavSearchBar = () => {
   };
 
   return (
-    <div className="bg-white w-[90%] mx-auto rounded-md flex gap-3 items-center justify-center shadow-sm px-4 py-2 border mt-2">
+    <div className="bg-white block  md:hidden">
+
+   
+    <div className="bg-white flex  w-[90%] mx-auto rounded-md  gap-3 items-center justify-center shadow-sm px-4 py-2 border mt-2">
       <Input
         className="bg-white  text-black border-none focus-visible:ring-0 shadow-none"
         type="text"
@@ -39,6 +42,7 @@ const NavSearchBar = () => {
       <button onClick={handleSearch} className="search-button text-black">
         <FaSearch className="text-black" />
       </button>
+    </div>
     </div>
   );
 };
