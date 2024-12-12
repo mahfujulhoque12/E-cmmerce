@@ -38,7 +38,7 @@ const ComparePage = () => {
                   alt={item.name}
                   width={300}
                   height={200}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-56 object-contain"
                 />
 
                 {/* Product Details */}

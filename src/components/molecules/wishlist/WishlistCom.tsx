@@ -34,7 +34,7 @@ const WishlistCom: React.FC = () => {
                     src={item.image}
                     alt={item.name}
                     layout="fill"
-                    className="object-cover"
+                    className=" w-full h-56 object-contain"
                   />
                 </div>
 
