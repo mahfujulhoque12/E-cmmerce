@@ -43,7 +43,7 @@ const ShopSingleProducts: React.FC<ShopSingleProductsProps> = ({ products }) => 
                 width={300}
                 height={250}
                 alt={card.title}
-                className="h-[200px] object-cover mt-5 transition-all duration-300 group-hover:scale-110"
+                className="h-[200px] object-contain mt-5 transition-all duration-300 group-hover:scale-110"
               />
             </div>
             <p className="w-full h-[2px] bg-gray-200"></p>

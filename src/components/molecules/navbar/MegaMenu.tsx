@@ -158,7 +158,6 @@ const menuData: MenuDataItem[] = [
 
 
   { label: "About Us", href: "/about-us" },
-  { label: "Blogs", href: "/blog" },
   { label: "Contact Us", href: "/contact-us" },
 
 ];

@@ -10,7 +10,7 @@ import AddToCart from "../top-header/AddToCart";
 
 const FooterCus:React.FC = () => {
   return (
-    <div className="flex justify-between items-center bg-white h-24 px-4">
+    <div className="flex justify-between items-center bg-white h-24 px-4 drop-shadow-sm ">
     <div className="flex flex-col justify-center items-center">
       <Link href="">
         <IoMdMenu size={20} />
