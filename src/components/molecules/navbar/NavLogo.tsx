@@ -7,7 +7,7 @@ import Link from 'next/link'
 const NavLogo = () => {
   return (
     <div> 
-    <Link href="#">
+    <Link href="/">
     <Image src={logo} width={100} height={50} alt='logo' className='h-[70px]'/>
     </Link>
 </div>
