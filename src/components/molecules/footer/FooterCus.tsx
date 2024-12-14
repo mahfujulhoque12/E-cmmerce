@@ -33,7 +33,7 @@ const FooterCus:React.FC = () => {
   
     <div className="flex flex-col justify-center items-center">
       <AddToCart />
-      <Paragraph className="text-sm font-semibold text-black mt-[-8px]">Cart</Paragraph>
+      <Paragraph className="text-sm font-semibold text-black ">Cart</Paragraph>
     </div>
   
     <div className="flex flex-col justify-center items-center">

@@ -4,6 +4,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaCodeCompare } from "react-icons/fa6";
 import { Button } from "@/components/atoms/Button";
 import { useCart } from "@/context/CartContext";
+import Span from "@/components/atoms/Span";
 
 const AddWishlist: React.FC<{
   item: { id: number; name: string; price: number; image: string };
@@ -45,9 +46,9 @@ const AddWishlist: React.FC<{
   return (
     <div>
       {msg && (
-        <span className="text-sm text-green-600 mt-2 transition-opacity duration-300">
+        <Span className="text-sm text-green-600 mt-2 transition-opacity duration-300">
           {msg}
-        </span>
+        </Span>
       )}
       <div className="flex gap-4 items-center py-1">
         <Button onClick={handleWishlistAdded}>
